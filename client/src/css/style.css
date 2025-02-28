@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(137, 219, 226);
+}
+
+#homeDoctors
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+#doclogin 
+{
+    width: 500px;
+    margin: auto;
+}
+
+#dotordashboard
+{
+    display: flex;
+   
+}
+
+#docleftmenu
+{
+    width: 15%;
+    background-color: black;
+    color: white;
+}
