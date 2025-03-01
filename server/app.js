@@ -7,7 +7,13 @@ const doctorRoute= require("./routes/doctorRoute");
 const patientRoute= require("./routes/patientRoute");
 require("dotenv").config();
 
-app.use(cors());
+
+app.use(cors({
+    origin: 'https://doctor-appointment-system-phi.vercel.app', // Allow frontend domain
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type,Authorization',
+  }));
+
 // Parse incoming requests with JSON payloads
 app.use(bodyParser.json());
 // Parse incoming requests with urlencoded payloads
@@ -17,7 +23,7 @@ mongoose.connect(process.env.DBCONN).then(()=>{
 })
 
 
-
+// app.use(cors());
 app.use("/doctor", doctorRoute);
 app.use("/patient", patientRoute);
 
