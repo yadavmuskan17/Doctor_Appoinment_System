@@ -23,7 +23,7 @@ const TopMenu=()=>{
     const handleSubmit=async(e)=>{
         e.preventDefault();
 
-        let api=`${BASE_URL}/doctor/registration`;
+        let api=`https://doctor-appoinment-system-rag3.onrender.com/doctor/registration`;
         try {
             const response = await axios.post(api, input);
             console.log(response);

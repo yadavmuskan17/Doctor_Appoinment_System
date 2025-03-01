@@ -11,7 +11,7 @@ const Home = () => {
 
     const navigate = useNavigate();
     const loadData = async () => {
-        let api = "http://localhost:8000/doctor/homedoctorsdisplay";
+        let api = "https://doctor-appoinment-system-rag3.onrender.com/doctor/homedoctorsdisplay";
         try {
             const response = await axios.get(api);
             console.log(response.data);

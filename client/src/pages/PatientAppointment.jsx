@@ -10,7 +10,8 @@ const PatientAppointment=()=>{
     const [docInfo, setDocInfo]= useState({});
     const [input, setInput] = useState({});
     const loadData=async()=>{
-        let api=`"http://localhost:8000/patient/pateintappnt/?id=${id}`;
+       // let api=`"http://localhost:8000/patient/pateintappnt/?id=${id}`;
+        let api=`"https://doctor-appoinment-system-rag3.onrender.com/patient/pateintappnt/?id=${id}`;
         try {
               const response= await axios.get(api);
               console.log(response.data);

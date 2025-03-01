@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import BASE_URL from "../config";
+
 import Table from 'react-bootstrap/Table';
 const MyPatient=()=>{
     const [mydata, setMydata] = useState([]);
 
     const loadData=async()=>{
-        let api=`http://localhost:8000/doctor/patientlist/?docid=${localStorage.getItem("docid")}`;
+        let api=`https://doctor-appoinment-system-rag3.onrender.com/doctor/patientlist/?docid=${localStorage.getItem("docid")}`;
         const response = await axios.get(api);
         console.log(response.data);
         setMydata(response.data);
