@@ -9,33 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import {Link} from "react-router-dom";
 
 const TopMenu=()=>{
-     const [input, setInput] = useState({});
-  
-
-
-    const handleInput=(e)=>{
-       let name=e.target.name;
-       let value=e.target.value;
-       setInput(values=>({...values, [name]:value}));
-       console.log(input);
-    }
-
-    const handleSubmit=async(e)=>{
-        e.preventDefault();
-
-        let api=`https://doctor-appoinment-system-rag3.onrender.com/doctor/registration`;
-        try {
-            const response = await axios.post(api, input);
-            console.log(response);
-            toast.success(response.data.msg);
-            setShow(false)
-        } catch (error) {
-            console.log(error);
-        }
-
-
-        
-    }
+   
     return(
         <>
            <Navbar style={{backgroundColor:"rgb(38, 73, 139)"}} data-bs-theme="dark">

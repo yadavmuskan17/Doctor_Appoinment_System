@@ -25,7 +25,8 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    let api = `https://doctor-appoinment-system-rag3.onrender.com/doctor/registration`;
+   let api = `https://doctor-appoinment-system-rag3.onrender.com/doctor/registration`;
+    //let api = `http://localhost:8000/doctor/registration`;
     try {
       const response = await axios.post(api, input);
       console.log(response);
