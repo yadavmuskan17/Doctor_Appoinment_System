@@ -6,7 +6,7 @@ const MyPatient=()=>{
     const [mydata, setMydata] = useState([]);
 
     const loadData=async()=>{
-        let api=`https://doctor-appoinment-system-rag3.onrender.com/doctor/patientlist/?docid=${localStorage.getItem("docid")}`;
+        let api=`https://doctor-appoinment-system-1.onrender.com/doctor/patientlist/?docid=${localStorage.getItem("docid")}`;
         //let api=`http://localhost:8000/doctor/patientlist/?docid=${localStorage.getItem("docid")}`;
 
         const response = await axios.get(api);

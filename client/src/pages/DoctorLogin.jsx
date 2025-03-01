@@ -16,7 +16,7 @@ const DoctorLogin=()=>{
    const handleSubmit=async(e)=>{
     e.preventDefault();
      //let api="http://localhost:8000/doctor/doctorlogin";
-     let api="https://doctor-appoinment-system-rag3.onrender.com/doctor/doctorlogin";
+     let api="https://doctor-appoinment-system-1.onrender.com/doctor/doctorlogin";
     
 
     try {

@@ -34,7 +34,7 @@ const PatientAppointment=()=>{
 
 
      const handleSubmit=async()=>{
-        let api=`https://doctor-appoinment-system-rag3.onrender.com/patient/appntsave`;
+        let api=`https://doctor-appoinment-system-1.onrender.com/patient/appntsave`;
         //let api=`http://localhost:8000/patient/appntsave`;
         try {
             const response = await axios.post(api, {docid:id, ...input});
