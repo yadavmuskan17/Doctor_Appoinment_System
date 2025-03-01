@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
-import BASE_URL from '../config';
+
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 

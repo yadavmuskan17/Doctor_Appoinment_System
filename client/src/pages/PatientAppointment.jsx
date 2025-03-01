@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import { useState, useEffect } from "react";
 import axios from "axios";
-import BASE_URL from "../config";
+
 import Button from "react-bootstrap/esm/Button";
 
 const PatientAppointment=()=>{
@@ -11,7 +11,7 @@ const PatientAppointment=()=>{
     const [input, setInput] = useState({});
     const loadData=async()=>{
        // let api=`"http://localhost:8000/patient/pateintappnt/?id=${id}`;
-        let api=`"https://doctor-appoinment-system-rag3.onrender.com/patient/pateintappnt/?id=${id}`;
+        let api=`https://doctor-appoinment-system-rag3.onrender.com/patient/pateintappnt/?id=${id}`;
         try {
               const response= await axios.get(api);
               console.log(response.data);
@@ -34,7 +34,7 @@ const PatientAppointment=()=>{
 
 
      const handleSubmit=async()=>{
-        let api=`${BASE_URL}/patient/appntsave`;
+        let api=`https://doctor-appoinment-system-rag3.onrender.com/patient/appntsave`;
         try {
             const response = await axios.post(api, {docid:id, ...input});
             alert("data save");

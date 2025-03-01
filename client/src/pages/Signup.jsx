@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
-import BASE_URL from '../config';
+
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -29,8 +29,8 @@ const Signup = () => {
     try {
       const response = await axios.post(api, input);
       console.log(response);
-      toast.success(response.data.msg);
-      setShow(false)
+      alert(response.data.msg);
+     
     } catch (error) {
       console.log(error);
     }
